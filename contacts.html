@@ -1,0 +1,147 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menu</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact-form.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src='js/device.min.js'></script> 
+</head>
+
+<body>
+<div class="page">
+    <header>
+     <div id="stuck_container" class="stuck_container">
+            <div class="container">
+
+                <div class="brand">
+                    <h1 class="brand_name">
+                        <a href="./">Cafe</a>
+                    </h1>
+                </div>
+
+                <nav class="nav">
+                    <ul class="sf-menu">
+                        <li>
+                            <a href="./">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                            
+                                </li>
+                                
+                        <li>
+                            <a href="what_we_do.html">What We Do</a>
+                        </li>
+                        <li>
+                            <a href="menu.html">Menu</a>
+                        </li>
+                        <li class="active">
+                            <a href="contacts.html">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    
+    <main>
+        <section class="well well__offset-3">
+            <div class="container">
+                <h2><em>Our</em>Contacts</h2>
+
+                <div class="map">
+                  <div id="google-map" class="map_model"></div>
+                  <ul class="map_locations">
+                    <li data-x="-73.9874068" data-y="40.643180">
+                      <p>  <span>800 2345-6789</span></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row box-3">
+                    <div class="grid_5">
+                        <h2>Contacts Form</h2>
+                        <form id="contact-form" class='contact-form' method="POST"action="contact">
+                            <div class="contact-form-loader"></div>
+                            <fieldset>
+                                <label class="name">
+                                    Your Name:
+                                    <input type="text" name="name" placeholder="" value=""
+                                           data-constraints="@Required @JustLetters"/>                
+                                    <span class="empty-message">*This field is required.</span>
+                                    <span class="error-message">*This is not a valid name.</span>
+                                </label>
+                
+                                <label class="email">
+                                    Your E-mail:
+                                    <input type="text" name="email" placeholder="" value=""
+                                           data-constraints="@Required @Email"/>                
+                                    <span class="empty-message">*This field is required.</span>
+                                    <span class="error-message">*This is not a valid email.</span>
+                                </label>
+                
+                                <label class="Subject">
+                                    Subject:
+                                    <input type="text" name="subject" placeholder="" value=""
+                                           data-constraints="@Required"/>                
+                                    <span class="empty-message">*This field is required.</span>
+                                    <span class="error-message">*This is not a valid phone.</span>
+                                </label>
+                
+                                <label class="message">
+                                    Message:
+                                    <textarea name="message" placeholder=""
+                                              data-constraints='@Required @Length(min=20,max=999999)'></textarea>                
+                                    <span class="empty-message">*This field is required.</span>
+                                    <span class="error-message">*The message is too short.</span>
+                                </label>
+                
+                                <div class="btn-wr">
+                                    <input type="reset" name="reset" value="reset">
+                                    <input type="submit" name="submit" value="submit">
+                                </div>
+                            </fieldset>
+                            
+                        </form>
+                    </div>    
+                    <div class="preffix_1 grid_6">
+                        <h2>Contacts Information</h2>
+                        
+                        <address class="address-2">
+                            <div class="address_container"><p>Kavs cafe opposite shades restaurant,beside Lassi shop,shivam road,vidya nagar.</p></div>
+                            <dl>
+                                <dt>Telphone:</dt> <dd>+ 800 603 6035</dd><br>
+                                <dt>FAX:</dt> <dd> 800 899 9898</dd><br>
+                                <dt>E-mail:</dt> <dd><a href="mailto:mail@demolink.org">kavs991@gmail.com</a></dd>
+                            </dl>                        
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <div class="container">
+            <ul class="socials">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-tumblr"></a></li>
+                <li><a href="#" class="fa fa-google-plus"></a></li>
+            </ul>
+            <div class="copyright">© <span id="copyright-year"></span> |
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        
+    </footer>
+</div>
+</body>
+</html>
